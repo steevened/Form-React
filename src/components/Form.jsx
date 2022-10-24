@@ -1,7 +1,9 @@
+import Card from './Card'
+
 function Form({ handleInput, handleSubmit, name, text }) {
   return (
-    <>
-      <h1>{text ? `Welcome ${text}` : ` Enter your Name:`}</h1>
+    <Card>
+      <h1>{text ? `Welcome ${text}.` : ` Enter your Name:`}</h1>
       <input
         type='text'
         onChange={handleInput}
@@ -11,7 +13,7 @@ function Form({ handleInput, handleSubmit, name, text }) {
       <button className='btn' onClick={handleSubmit}>
         Send
       </button>
-    </>
+    </Card>
   )
 }
 
